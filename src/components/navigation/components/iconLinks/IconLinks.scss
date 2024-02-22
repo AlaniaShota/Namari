@@ -1,0 +1,20 @@
+@import '../../../../variables.scss';
+
+.icons-section {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+    height: 22px;
+
+    .icons {
+        font-size: 19px;
+        color: $primary-gray-color;
+    }
+}
+
+@media (max-width :1025px) {
+    .icons-section {
+        display: none;
+    }
+}

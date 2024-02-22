@@ -1,0 +1,110 @@
+@import '../../variables.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    background-color: $white-color;
+    border-bottom: 1px solid $secondary-gray-color;
+
+    & .namari-logo {
+        width: auto;
+        height: 22px;
+
+        & img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    & .menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+
+        & .hamburger {
+            position: relative;
+            transition: transform 0.3s ease;
+            height: 30px;
+            width: 30px;
+            border-radius: 10px;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            & .hamburger:before,
+            & .hamburger:after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 13px;
+                transition: transform 0.3s ease;
+            }
+
+            & .hamburger:before {
+                top: -10px;
+            }
+
+            & .hamburger:after {
+                top: 10px;
+            }
+
+
+
+        }
+    }
+}
+
+
+.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    height: 100%;
+    background-color: $secondary-gray-color;
+    width: 85%;
+    box-shadow: 0px 8px 16px $secondary-black-color-rgba;
+    z-index: 10;
+    opacity: 0;
+}
+
+
+@media (min-width: 1025px) {
+    .menu-button {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+        padding: 25px 0;
+        position: sticky;
+        background-color: $white-color;
+        border-bottom: 1px solid $secondary-gray-color;
+        z-index: 1000;
+    }
+
+    .menu {
+        position: static;
+        opacity: 1;
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-evenly;
+        box-shadow: none;
+        background-color: $white-color;
+    }
+}

@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+    & .btn {
+        border: 3px solid $primary-black-color;
+        margin: 35px 0;
+        padding: 11px 16px;
+        width: 100%;
+
+        & .btn-text {
+            padding: 11px 16px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width:430px) {
+    .btn-container {
+        justify-content: start;
+
+        width: auto;
+
+        & .btn {
+
+            margin: 15px 0;
+            padding: 10px;
+            width: 60%;
+
+            & .btn-text {
+                padding: 0px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width:330px) {
+    .btn-container {
+        width: auto;
+
+        & .btn {
+            width: 100%;
+
+
+        }
+    }
+}
