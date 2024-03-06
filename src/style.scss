@@ -4,8 +4,16 @@
     background-color: $white-color;
 
     // margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 100px;
     /* height: 95vh; */
+    // background: $third-gray-color;
+
+    // & .main-section {
+    //     background-color: $white-color;
+    //     margin: 80px 80px;
+    //     // z-index: 100;
+    // }
+
 }
 
 @media (max-width:800px) {

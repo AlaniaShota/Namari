@@ -1,9 +1,3 @@
-import facebook from "../../../../assets/icon/icons8-facebook-50.png";
-import google from "../../../../assets/icon/icons8-google-50.png";
-import twitter from "../../../../assets/icon/icons8-twitter-50.png";
-import instagram from "../../../../assets/icon/icons8-instagram-50.png";
-import figma from "../../../../assets/icon/icons8-figma-50.png";
-
 import { FaFacebookF } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";

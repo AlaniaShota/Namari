@@ -3,11 +3,12 @@
 .about-section {
     display: flex;
     flex-direction: row;
-    margin: 80px 0;
+    padding: 40px 0;
+    // padding: 0 80px;
 
 
     & .about-section-header {
-    
+
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -49,6 +50,7 @@
     .about-section {
         flex-direction: column;
         margin: 40px 0;
+        padding: 0;
 
         & .about-section-header {
 
@@ -64,7 +66,7 @@
                 color: $secondary-gray-color;
                 font-size: 14px;
                 font-weight: 700;
-            
+
             }
 
             & .about-header-title {

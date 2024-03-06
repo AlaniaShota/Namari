@@ -6,6 +6,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Banner } from "./components/banner";
 import "./style.scss";
 import { About } from "./components/about";
+import { Gallery } from "./components/gallery/Gallery";
 
 function App() {
   // const container = useRef(null);
@@ -25,6 +26,7 @@ function App() {
         <Navigation />
         <Banner />
         <About />
+        <Gallery />
       </div>
     </motion.div>
   );

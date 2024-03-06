@@ -17,6 +17,7 @@ export const Banner = () => {
       //   style={{ y: parallax }}
       //   ref={container}
       className="banner-section"
+      id="home"
     >
       <div className="banner-content">
         <h1 className="banner-section-text">A FREE AND SIMPLE LANDING PAGE</h1>
