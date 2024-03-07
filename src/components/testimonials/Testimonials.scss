@@ -1,0 +1,187 @@
+@import '../../variables.scss';
+
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .testimonials-section-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+
+        & .testimonials-span-title {
+            padding-top: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-gray-color;
+        }
+
+        & .testimonials-content {
+            display: flex;
+            flex-direction: column;
+
+            & .testimonials-title {
+                font-size: 34px;
+                padding: 14px 0;
+                font-weight: 700;
+                position: relative;
+
+                &::after {
+                    background: $secondary-gold-color;
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 5px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    & .customers-content-section {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 0;
+
+        & .customers-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            & .content-img {
+                border-radius: 50%;
+                margin-bottom: 35px;
+                max-height: 120px;
+
+                & img {
+                    width: 100%;
+                    max-height: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            & .customers-description {
+                text-align: center;
+                font-size: 17px;
+                font-weight: 300;
+                padding-bottom: 20px;
+                position: relative;
+
+                &::after {
+                    background: $secondary-gold-color;
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 5px;
+                    // margin-top: 130px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+
+                }
+            }
+
+            & .customers {
+                padding-top: 12px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .testimonials-section {
+
+
+        & .testimonials-section-content {
+
+            padding: 10px 0;
+        }
+
+        & .customers-content-section {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 0;
+
+            & .customers-content {
+                padding: 12px;
+
+                & .content-img {
+                    margin-bottom: 25px;
+                }
+
+                & .customers-description {
+                    padding-bottom: 15px;
+                }
+
+                & .customers {
+                    padding-top: 12px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .testimonials-section {
+        & .testimonials-section-content {
+
+
+            & .testimonials-content {
+
+                & .testimonials-title {
+                    text-align: center;
+
+
+                }
+            }
+        }
+
+        & .customers-content-section {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            width: 100%;
+
+            & .customers-content {
+                padding: 15px;
+
+
+                & .content-img {
+
+                    height: 150px;
+
+                    & img {
+                        height: 100%;
+                    }
+                }
+
+                & .customers-description {
+                    font-size: 15px;
+                    padding-bottom: 15px;
+
+
+                }
+
+                & .customers {
+                    padding-top: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

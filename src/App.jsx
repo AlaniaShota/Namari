@@ -7,6 +7,8 @@ import { Banner } from "./components/banner";
 import "./style.scss";
 import { About } from "./components/about";
 import { Gallery } from "./components/gallery/Gallery";
+import { Service } from "./components/service";
+import { Testimonials } from "./components/testimonials";
 
 function App() {
   // const container = useRef(null);
@@ -27,6 +29,8 @@ function App() {
         <Banner />
         <About />
         <Gallery />
+        <Service />
+        <Testimonials />
       </div>
     </motion.div>
   );

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./Gallery.scss";
 
 import firstImg from "../../assets/image/Aesthetic Wallpaper.jpg";
@@ -8,6 +10,10 @@ import fifthImg from "../../assets/image/EXR_MUZ.jpg";
 import sixthImg from "../../assets/image/got you.jpg";
 
 export const Gallery = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   const galleryData = [
     sixthImg,
     secondImg,
@@ -17,17 +23,43 @@ export const Gallery = () => {
     firstImg,
   ];
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemAnimation = {
+    hidden: { y: 80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div className="gallery-section" id="gallery">
+    <motion.div
+      ref={ref}
+      variants={container}
+      animate={inView ? "visible" : "hidden"}
+      className="gallery-section"
+      id="gallery"
+    >
       <div className="gallery-content">
         {galleryData.map((item, index) => (
           <div key={index} className="gallery-img-content">
-            <figure>
+            <motion.figure variants={itemAnimation}>
               <img src={item} alt="" className="img-content" />
-            </figure>
+            </motion.figure>
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

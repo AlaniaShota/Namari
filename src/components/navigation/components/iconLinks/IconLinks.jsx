@@ -39,7 +39,6 @@ export const IconLinks = () => {
       {iconLink.map((item) => (
         <div key={item.id}>
           <a href={item.link} target="_blink">
-            {/* <img src={item.png} alt="error" /> */}
             <item.png className="icons" />
           </a>
         </div>

@@ -4,17 +4,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 66%;
+
 
     & .btn {
         border: 3px solid $primary-black-color;
         margin: 35px 0;
         padding: 11px 16px;
         width: 100%;
+        cursor: pointer;
+        transition: $transition-content;
 
         & .btn-text {
             padding: 11px 16px;
             font-size: 18px;
+            transition: $transition-content;
+        }
+    }
+
+    & .btn:hover {
+        border: 3px solid $secondary-gold-color;
+
+
+        & .btn-text {
+            color: $secondary-gold-color;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .btn-container {
+        // justify-content: start;
+
+        // width: auto;
+
+        & .btn {
+
+            margin: 11px 0;
+            padding: 8px;
+            width: 100%;
+
+            & .btn-text {
+                padding: 0px;
+                font-weight: 600;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -34,7 +68,7 @@
             & .btn-text {
                 padding: 0px;
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -46,8 +80,6 @@
 
         & .btn {
             width: 100%;
-
-
         }
     }
 }

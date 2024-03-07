@@ -19,16 +19,21 @@ export const Links = ({ isOpen, setIsOpen }) => {
     },
     {
       id: 4,
+      name: "SERVICE",
+      link: "#service",
+    },
+    {
+      id: 5,
       name: "TESTIMONIALS",
       link: "#testimonials",
     },
     {
-      id: 5,
+      id: 6,
       name: "CLIENTS",
       link: "#clients",
     },
     {
-      id: 6,
+      id: 7,
       name: "PRICING",
       link: "#pricing",
     },

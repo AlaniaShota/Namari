@@ -1,0 +1,113 @@
+@import '../../variables.scss';
+
+.service-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // padding: 40px 0;
+
+    // gap: 7px;
+
+    & .service-section-citation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px;
+        text-align: end;
+        font-weight: 300;
+
+        & .text-citation {
+            font-size: 22px;
+            color: $primary-black-color;
+        }
+
+        & .text-writer {
+            padding-top: 12px;
+        }
+
+
+    }
+
+    & .service-section-believing {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px;
+
+        & .text-span {
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-gray-color;
+            padding-top: 10px;
+        }
+
+        & .title-believing {
+            font-size: 34px;
+            font-weight: 700;
+            color: $primary-black-color;
+            padding: 20px 0;
+        }
+
+        & .title-believing:after {
+            background: $secondary-gold-color;
+            content: "";
+            display: block;
+            width: 30px;
+            height: 5px;
+            margin-top: 30px;
+        }
+
+        & .description-first {
+            color: $third-gray-color;
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        & .description-second {
+            margin: 16px 0;
+            line-height: 24px;
+
+        }
+
+        & .description-third {
+            // margin: 16px 0;
+            line-height: 24px;
+        }
+    }
+
+    & .section-service-img {
+        width: auto;
+        padding: 20px;
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width:430px) {
+    .service-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+
+        // & .service-section-citation {
+        //     padding: 0;
+        // }
+
+        & .service-section-believing {
+            padding: 20px 0;
+        }
+
+        & .section-service-img {
+            // width: auto;
+            padding: 20px 0;
+
+        }
+    }
+
+
+}

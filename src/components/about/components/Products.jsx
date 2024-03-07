@@ -6,10 +6,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import "./Products.scss";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export const Products = () => {
-  //   const ref = useRef(null);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
