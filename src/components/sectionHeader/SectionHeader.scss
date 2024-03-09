@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.section-header-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+
+    & .section-secondary-title {
+        padding-top: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $secondary-gray-color;
+    }
+
+    & .section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .section-title {
+            font-size: 34px;
+            padding: 14px 0;
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+                background: $secondary-gold-color;
+                content: "";
+                display: block;
+                width: 30px;
+                height: 5px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+
+    .section-header-title {
+        display: flex;
+        // flex-direction: row;
+        padding: 10px 0;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .section-header-title {
+        text-align: center;
+
+        & .section-secondary-title {
+
+
+            & .section-content {
+
+                & .section-title {
+                    text-align: center;
+
+
+                }
+            }
+        }
+    }
+}

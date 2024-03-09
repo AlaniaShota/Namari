@@ -1,0 +1,13 @@
+.clients-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 75px 0;
+}
+
+@media(max-width:480px) {
+    .clients-section {
+        flex-direction: column;
+        padding: 45px 0;
+    }
+}

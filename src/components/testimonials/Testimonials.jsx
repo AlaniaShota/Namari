@@ -2,6 +2,7 @@ import "./Testimonials.scss";
 import userImg from "../../assets/image/user-1.jpg";
 import userSecondImg from "../../assets/image/user-2.jpg";
 import userThirdImg from "../../assets/image/user-3.jpg";
+import { SectionHeader } from "../sectionHeader";
 
 export const Testimonials = () => {
   const customers = [
@@ -33,12 +34,10 @@ export const Testimonials = () => {
 
   return (
     <div className="testimonials-section" id="testimonials">
-      <div className="testimonials-section-content">
-        <span className="testimonials-span-title">FEEDBACK</span>
-        <div className="testimonials-content">
-          <h1 className="testimonials-title">What our customers are saying</h1>
-        </div>
-      </div>
+      <SectionHeader
+        spanText="FEEDBACK"
+        titleText="What our customers are saying"
+      />
       <div className="customers-content-section">
         {customers.map((item) => (
           <div key={item.id} className="customers-content">

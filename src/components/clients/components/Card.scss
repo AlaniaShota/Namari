@@ -1,0 +1,70 @@
+@import '../../../variables.scss';
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    width: 70%;
+
+    height: 70vh;
+
+    & .card-content {
+        width: 100% !important;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        transition: $transition-text;
+
+        & .card-icon {
+            // padding: 10px;
+            font-size: 50px;
+        }
+    }
+}
+
+.card-content:hover {
+    background: rgba(0, 0, 0, 0.8)
+}
+
+.title {
+    position: absolute;
+    top: 42%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
+    color: $white-color;
+    transition: $transition-text;
+    // padding: 5px;
+}
+
+@media (max-width:480px) {
+    .card-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding: 15px;
+
+        & .card-content {
+            width: 100% !important;
+            // position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            transition: $transition-text;
+
+            & .card-icon {
+                // padding: 10px;
+                font-size: 50px;
+            }
+        }
+    }
+}

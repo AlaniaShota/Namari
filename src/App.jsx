@@ -9,6 +9,8 @@ import { About } from "./components/about";
 import { Gallery } from "./components/gallery/Gallery";
 import { Service } from "./components/service";
 import { Testimonials } from "./components/testimonials";
+import { Clients } from "./components/clients";
+import { Price } from "./components/price";
 
 function App() {
   // const container = useRef(null);
@@ -23,6 +25,9 @@ function App() {
       // style={{ y: parallax }}
       // ref={container}
       className="namari"
+      initial={{ opacity: 0 }} // начальное состояние границы (невидима)
+      animate={{ opacity: 1 }} // анимация появления границы при загрузке страницы
+      transition={{ duration: 1 }} // длительность анимации
     >
       <div>
         <Navigation />
@@ -31,6 +36,8 @@ function App() {
         <Gallery />
         <Service />
         <Testimonials />
+        <Clients />
+        <Price />
       </div>
     </motion.div>
   );
