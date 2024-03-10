@@ -10,15 +10,10 @@ export const Banner = () => {
     target: container,
     offset: ["start start", "end start"],
   });
-  const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <motion.div
-      //   style={{ y: parallax }}
-      //   ref={container}
-      className="banner-section"
-      id="home"
-    >
+    <motion.div className="banner-section" id="home">
       <div className="banner-content">
         <h1 className="banner-section-text">A FREE AND SIMPLE LANDING PAGE</h1>
         <p className="banner-section-description">
