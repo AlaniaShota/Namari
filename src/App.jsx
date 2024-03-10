@@ -11,23 +11,15 @@ import { Service } from "./components/service";
 import { Testimonials } from "./components/testimonials";
 import { Clients } from "./components/clients";
 import { Price } from "./components/price";
+import { Footer } from "./components/footer";
 
 function App() {
-  // const container = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: container,
-  //   offset: ["start start", "end start"],
-  // });
-  // const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
   return (
     <motion.div
-      // style={{ y: parallax }}
-      // ref={container}
       className="namari"
-      initial={{ opacity: 0 }} // начальное состояние границы (невидима)
-      animate={{ opacity: 1 }} // анимация появления границы при загрузке страницы
-      transition={{ duration: 1 }} // длительность анимации
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <div>
         <Navigation />
@@ -38,6 +30,7 @@ function App() {
         <Testimonials />
         <Clients />
         <Price />
+        <Footer />
       </div>
     </motion.div>
   );

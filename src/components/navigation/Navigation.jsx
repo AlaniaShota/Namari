@@ -30,39 +30,41 @@ export const Navigation = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    document.body.classList.toggle("menu-open");
+  };
+
   return (
     <nav className="navbar">
-      <div className="namari-logo ">
+      <div className="namari-logo">
         <img src={logo} alt="Namari" />
       </div>
-      {isMobile ? (
-        <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
-          <div className="hamburger">
-            {isOpen ? (
-              <img src={close} alt="Close" />
-            ) : (
-              <img src={open} alt="Open" />
-            )}
-          </div>
-        </button>
-      ) : (
-        <div className="menu">
-          <Links isOpen={isOpen} />
-          <IconLinks />
+      <button className="menu-button" onClick={toggleMenu}>
+        <div className="hamburger">
+          {isOpen ? (
+            <img src={close} alt="Close" />
+          ) : (
+            <img src={open} alt="Open" />
+          )}
         </div>
-      )}
+      </button>
       {isMobile && isOpen && (
         <motion.div
-          className={`menu ${isOpen ? "open" : ""}`}
+          className={`menu ${isOpen ? "menu-open" : ""}`}
           variants={variants}
           initial="closed"
           animate={isOpen ? "open" : "closed"}
+          onClick={toggleMenu}
         >
           <Links />
         </motion.div>
       )}
+      {!isMobile && (
+        <div className="menu">
+          <Links isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
+      )}
     </nav>
   );
 };
-
-// export  Navigation;

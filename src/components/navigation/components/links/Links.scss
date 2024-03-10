@@ -2,18 +2,29 @@
 
 .links-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
-    gap: 45px;
+    gap: 25px;
+    z-index: 1000;
 
     & .links-text {
         color: $primary-gray-color;
-        font-size: 16px;
+        font-size: 17px;
         transition: $transition-text
     }
 
     & .links-text:hover {
         color: $secondary-gold-color;
+    }
+}
+
+@media (max-width: 2565px) {
+    .links-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+
     }
 }
 

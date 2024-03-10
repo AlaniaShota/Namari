@@ -16,6 +16,15 @@
     display: none;
 }
 
+@media (min-width:2300px) {
+    .namari {
+        width: 100%;
+        height: 95vh;
+        margin: auto;
+        padding: 0 370px;
+    }
+}
+
 @media (max-width:1025px) {
     .namari {
         background-color: $white-color;

@@ -3,6 +3,7 @@
 .section-price {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 15px 0;
 
     & .section-card-price {

@@ -1,3 +1,4 @@
+import { IconLinks } from "../iconLinks/IconLinks";
 import "./Links.scss";
 
 export const Links = ({ isOpen, setIsOpen }) => {
@@ -42,12 +43,13 @@ export const Links = ({ isOpen, setIsOpen }) => {
   return (
     <div className="links-section">
       {link.map((item) => (
-        <div key={item.id} onClick={() => setIsOpen(!isOpen)}>
+        <div key={item.id} onClick={() => setIsOpen(false)}>
           <a href={item.link}>
             <span className="links-text">{item.name}</span>
           </a>
         </div>
       ))}
+      <IconLinks />
     </div>
   );
 };

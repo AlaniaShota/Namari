@@ -29,8 +29,8 @@ export const Gallery = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.5,
+        delayChildren: 0.3,
+        staggerChildren: 0.4,
       },
     },
   };

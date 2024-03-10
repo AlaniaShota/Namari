@@ -34,6 +34,7 @@ export const IconLinks = () => {
       link: "https://www.figma.com/",
     },
   ];
+
   return (
     <div className="icons-section">
       {iconLink.map((item) => (
