@@ -1,5 +1,4 @@
-import React from "react";
-import './SectionHeader.scss'
+import "./SectionHeader.scss";
 export const SectionHeader = ({ spanText, titleText }) => {
   return (
     <div className="section-header-title">

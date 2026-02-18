@@ -1,34 +1,20 @@
-import { Links, IconLinks } from "./components/index";
+import { Links } from "./components/index";
 import logo from "../../assets/image/logo.png";
 import close from "../../assets/image/pngwing.com (3).png";
 import open from "../../assets/image/pngwing.com (4).png";
 import "./Navigation.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(false);
-
+  const isMobile = useMediaQuery("(max-width: 1440px)");
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "100%" },
   };
-
-  useEffect(() => {
-    const checkWindowSize = () => {
-      setIsMobile(window.innerWidth < 1025);
-    };
-
-    checkWindowSize();
-
-    window.addEventListener("resize", checkWindowSize);
-
-    return () => {
-      window.removeEventListener("resize", checkWindowSize);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -52,10 +38,10 @@ export const Navigation = () => {
       {isMobile && isOpen && (
         <motion.div
           className={`menu ${isOpen ? "menu-open" : ""}`}
-          variants={variants}
-          initial="closed"
-          animate={isOpen ? "open" : "closed"}
-          onClick={toggleMenu}
+          variants={isMobile ? variants : undefined}
+          initial={isMobile ? "closed" : false}
+          animate={isMobile ? (isOpen ? "open" : "closed") : false}
+          onClick={isMobile ? toggleMenu : undefined}
         >
           <Links />
         </motion.div>
