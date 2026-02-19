@@ -1,8 +1,4 @@
-// import img from "./assets/image/pngegg.png";
-
-import { useRef } from "react";
 import { Navigation } from "./components/navigation/index";
-import { useScroll, useTransform, motion } from "framer-motion";
 import { Banner } from "./components/banner";
 import "./style.scss";
 import { About } from "./components/about";
@@ -12,6 +8,8 @@ import { Testimonials } from "./components/testimonials";
 import { Clients } from "./components/clients";
 import { Price } from "./components/price";
 import { Footer } from "./components/footer";
+
+import { motion } from "framer-motion";
 
 function App() {
   return (

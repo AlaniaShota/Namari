@@ -1,4 +1,6 @@
 import { Button } from "../button";
+import { uiText } from "../../mockData/uiText";
+
 import "./Service.scss";
 import serviceImg from "../../assets/image/pngegg6.png";
 
@@ -7,37 +9,22 @@ export const Service = () => {
     <div className="service-section" id="service">
       <div className="service-section-citation">
         <p className="text-citation">
-          &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua&ldquo;
+          &ldquo;{uiText.service.loremText}&ldquo;
         </p>
-        <h4 className="text-writer">— John Doe, Happy Customer</h4>
+        <h4 className="text-writer">{uiText.service.writer}</h4>
       </div>
       <div className="service-section-believing">
-        <span className="text-span">BELIEVING</span>
-        <h1 className="title-believing">Focusing On What Matters Most</h1>
-        <p className="description-first">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam!
-        </p>
-        <p className="description-second">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo.
-        </p>
-        <p className="description-third">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-          sit amet!
-        </p>
+        <span className="text-span">{uiText.service.believe}</span>
+        <h1 className="title-believing">{uiText.service.focus}</h1>
+        <p className="description-first">{uiText.service.firtsDescription}</p>
+        <p className="description-second">{uiText.service.secondDescription}</p>
+        <p className="description-third">{uiText.service.thirdDescription}</p>
         <Button>
-          <span>WATCH VIDEO</span>
+          <span>{uiText.service.video}</span>
         </Button>
       </div>
       <div className="section-service-img">
-        <img src={serviceImg} alt="" />
+        <img src={serviceImg} alt={uiText.service.service} />
       </div>
     </div>
   );

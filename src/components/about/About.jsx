@@ -1,19 +1,16 @@
-import "./About.scss";
 import { Products } from "./components";
+
+import { uiText } from "../../mockData/uiText";
+
+import "./About.scss";
 
 export const About = () => {
   return (
     <div id="about" className="about-section">
       <div className="about-section-header">
-        <span className="about-secondary-title">SUCCESS</span>
-        <h1 className="about-header-title">
-          How We Help You To Sell Your Product
-        </h1>
-        <p className="about-header-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam!
-        </p>
+        <span className="about-secondary-title">{uiText.about.title}</span>
+        <h1 className="about-header-title">{uiText.about.secondTitle}</h1>
+        <p className="about-header-description">{uiText.about.description}</p>
       </div>
       <div className="products">
         <Products />

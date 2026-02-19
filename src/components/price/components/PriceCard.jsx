@@ -1,8 +1,12 @@
-import React, { useEffect } from "react";
-import "./PriceCard.scss";
 import { Button } from "../../button";
+import { uiText } from "../../../mockData/uiText";
+
+import { useEffect } from "react";
+import "./PriceCard.scss";
+
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+
 export const PriceCard = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -24,44 +28,7 @@ export const PriceCard = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
-  const priceData = [
-    {
-      id: 1,
-      name: "PERSONAL",
-      status: "The standard version",
-      price: 19,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      download: "5 Downloads",
-      extensions: "2 Extensions",
-      video: "Tutorials",
-      support: "Forum Support",
-      free: "1 year free updates",
-    },
-    {
-      id: 2,
-      name: "STUDENT",
-      status: "Most popular choice",
-      price: 29,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      download: "15 Downloads",
-      extensions: "5 Extensions",
-      video: "Tutorials with Files",
-      support: "Forum Support",
-      free: "2 years free updates",
-    },
-    {
-      id: 3,
-      name: "BUSINESS",
-      status: "For the whole team",
-      price: 49,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      download: "Unlimited Downloads",
-      extensions: "Unlimited Extensions",
-      video: "HD Video Tutorials",
-      support: "Chat Support",
-      free: "Lifetime free updates",
-    },
-  ];
+  // const ;
 
   return (
     <motion.div
@@ -71,7 +38,7 @@ export const PriceCard = () => {
       initial={{ opacity: 0, y: 70 }}
       animate={productAnimation}
     >
-      {priceData.map((item) => (
+      {uiText.priceCard.map((item) => (
         <div key={item.id} className="section-card-price">
           <div className="card-header">
             <h1 className="card-header-secondary-title">{item.name}</h1>
@@ -105,7 +72,7 @@ export const PriceCard = () => {
               <li className="card-section-about">{item.free}</li>
             </ul>
             <Button>
-              <span>BUY TODAY</span>
+              <span>{uiText.productButton}</span>
             </Button>
           </div>
         </div>

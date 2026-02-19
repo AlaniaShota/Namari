@@ -1,7 +1,9 @@
 import { Links } from "./components/index";
+
 import logo from "../../assets/image/logo.png";
 import close from "../../assets/image/pngwing.com (3).png";
 import open from "../../assets/image/pngwing.com (4).png";
+
 import "./Navigation.scss";
 import { useState } from "react";
 import { motion } from "framer-motion";

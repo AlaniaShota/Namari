@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import "./Gallery.scss";
 
 import firstImg from "../../assets/image/Aesthetic Wallpaper.jpg";
@@ -8,6 +6,9 @@ import thirdImg from "../../assets/image/download (2).jpg";
 import forthImg from "../../assets/image/download.jpg";
 import fifthImg from "../../assets/image/EXR_MUZ.jpg";
 import sixthImg from "../../assets/image/got you.jpg";
+
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export const Gallery = () => {
   const [ref, inView] = useInView({

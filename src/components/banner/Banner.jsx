@@ -1,8 +1,12 @@
-import { useRef } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
-import "./Banner.scss";
-import bannerImg from "../../assets/image/pngegg7.png";
 import { Button } from "../button/index";
+import bannerImg from "../../assets/image/pngegg7.png";
+import { uiText } from "../../mockData/uiText";
+
+import { useRef } from "react";
+
+import "./Banner.scss";
+
+import { useScroll, useTransform, motion } from "framer-motion";
 
 export const Banner = () => {
   const container = useRef(null);
@@ -15,13 +19,12 @@ export const Banner = () => {
   return (
     <motion.div className="banner-section" id="home">
       <div className="banner-content">
-        <h1 className="banner-section-text">A FREE AND SIMPLE LANDING PAGE</h1>
+        <h1 className="banner-section-text">{uiText.banner.title}</h1>
         <p className="banner-section-description">
-          Namari is a free landing page template you can use for your projects.
-          It is free to use for your personal and commercial projects, enjoy!
+          {uiText.banner.description}
         </p>
         <Button>
-          <span>START CREATE TODAY</span>
+          <span>{uiText.banner.span}</span>
         </Button>
       </div>
       <motion.div
@@ -29,7 +32,7 @@ export const Banner = () => {
         ref={container}
         className="banner-img"
       >
-        <img src={bannerImg} alt="Namari" />
+        <img src={bannerImg} alt={uiText.banner.alt} />
       </motion.div>
     </motion.div>
   );
